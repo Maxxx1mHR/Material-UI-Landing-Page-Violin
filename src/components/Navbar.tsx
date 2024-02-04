@@ -6,7 +6,7 @@ export const Navbar = () => {
   const menuItems = ["Обо мне", "Продукты", "Контакты"];
 
   return (
-    <AppBar position="sticky" sx={{ background: theme.palette.colors.backgroundColorNavigationBar }}>
+    <AppBar position="sticky" sx={{ backgroundColor: "unset" }}>
       <Container sx={{ padding: { xs: "10px 10px" } }}>
         <Toolbar
           sx={{

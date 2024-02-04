@@ -4,7 +4,7 @@ import { convertLength } from "@mui/material/styles/cssUtils";
 export const Introduction = () => {
   const theme = useTheme();
   return (
-    <Box component="section">
+    <Box component="section" sx={{ marginBottom: "40px" }}>
       <Box
         sx={{
           display: "flex",
@@ -14,7 +14,7 @@ export const Introduction = () => {
           padding: "20px 40px",
           gap: "40px",
           backgroundImage:
-            ' linear-gradient(to top, rgba(0,0,0,0.7), rgba(0,0,0,0.4)), url("img/background/violine1.jpg")',
+            ' linear-gradient(to top, rgba(0,0,0,0.7), rgba(0,0,0,0.4)), url("img/background/violin.jpg")',
           backgroundRepeat: "no-repeat",
           backgroundSize: "cover",
           overflow: "hidden",
@@ -48,7 +48,7 @@ export const Introduction = () => {
             component="img"
             sx={{ position: "relative", height: "100%", top: "67px" }}
             alt="Sveltala photo"
-            src="img/sveta1.png"
+            src="img/sveta.png"
           />
         </Box>
       </Box>

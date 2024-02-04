@@ -1,1 +1,7 @@
 @import "./styles/base/normalize";
+
+body {
+  // background-image: url("../public/img/background/main-bgc.jpg");
+  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+    url("../public/img/background/main-bgc.jpg");
+}
