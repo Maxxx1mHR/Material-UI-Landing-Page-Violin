@@ -3,7 +3,7 @@ import { useState } from "react";
 import { Swiper, SwiperRef, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination, Scrollbar, A11y, Autoplay, EffectCube } from "swiper/modules";
 
-import data from "../../data.json";
+import data from "../../../../data.json";
 
 interface MyComponentProps {
   open: boolean;
