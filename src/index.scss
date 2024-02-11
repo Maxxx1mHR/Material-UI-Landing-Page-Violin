@@ -7,7 +7,16 @@ html {
 body {
   color: #fff;
   background-image: linear-gradient(to top, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
-    url("../public/img/background/main-bgc.jpg");
+    url("../public/img/background/girl.jpg");
+  background-size: cover;
+  background-position: center calc(50% + 54rem);
+}
+
+main {
+  // color: #fff;
+  // background-image: linear-gradient(to top, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+  //   url("../public/img/background/girl.jpg");
+  // background-size: cover;
 }
 
 .container {

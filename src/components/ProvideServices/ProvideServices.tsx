@@ -1,11 +1,21 @@
-import { Box, Paper, styled } from "@mui/material";
+import { Box, Paper, Typography, styled } from "@mui/material";
 import Grid from "@mui/material/Unstable_Grid2"; // Grid version 2
 
-export const Services = () => {
+export const ProvideServices = () => {
   return (
-    <Box sx={{ padding: "20px" }}>
+    <Box>
+      <Typography
+        variant="h3"
+        component="h1"
+        sx={{
+          textAlign: "center",
+          marginBottom: "20px",
+        }}
+      >
+        С чем можем помочь
+      </Typography>
       <Grid container spacing={2}>
-        <Grid xs={12} md={6} sx={{ padding: { xs: 0, md: 1 } }}>
+        <Grid zero={12} tablet={6} sx={{ paddingBottom: { zero: 0, tablet: 1 } }}>
           <Box
             component="ul"
             sx={{
@@ -13,19 +23,7 @@ export const Services = () => {
               listStyleType: "none",
             }}
           >
-            <Box
-              component="li"
-              sx={{
-                position: "relative",
-                "&:before": {
-                  content: "''",
-                  position: "absolute",
-                  width: "2px",
-                  height: "100%",
-                  backgroundColor: "#fff",
-                },
-              }}
-            >
+            <Box component="li">
               <Box sx={{ paddingLeft: "20px" }}>
                 <Box
                   sx={{
@@ -49,19 +47,7 @@ export const Services = () => {
                 </Box>
               </Box>
             </Box>
-            <Box
-              component="li"
-              sx={{
-                position: "relative",
-                "&:before": {
-                  content: "''",
-                  position: "absolute",
-                  width: "2px",
-                  height: "100%",
-                  backgroundColor: "#fff",
-                },
-              }}
-            >
+            <Box component="li">
               <Box sx={{ paddingLeft: "20px" }}>
                 <Box
                   sx={{
@@ -88,7 +74,7 @@ export const Services = () => {
           </Box>
         </Grid>
 
-        <Grid xs={12} md={6} sx={{ padding: { xs: 0, md: 1 } }}>
+        <Grid zero={12} tablet={6} sx={{ paddingTop: { zero: 0, tablet: 1 } }}>
           <Box
             component="ul"
             sx={{
@@ -96,19 +82,7 @@ export const Services = () => {
               listStyleType: "none",
             }}
           >
-            <Box
-              component="li"
-              sx={{
-                position: "relative",
-                "&:before": {
-                  content: "''",
-                  position: "absolute",
-                  width: "2px",
-                  height: "100%",
-                  backgroundColor: "#fff",
-                },
-              }}
-            >
+            <Box component="li">
               <Box sx={{ paddingLeft: "20px" }}>
                 <Box
                   sx={{
@@ -132,19 +106,7 @@ export const Services = () => {
                 </Box>
               </Box>
             </Box>
-            <Box
-              component="li"
-              sx={{
-                position: "relative",
-                "&:before": {
-                  content: "''",
-                  position: "absolute",
-                  width: "2px",
-                  height: "100%",
-                  backgroundColor: "#fff",
-                },
-              }}
-            >
+            <Box component="li">
               <Box sx={{ paddingLeft: "20px" }}>
                 <Box
                   sx={{

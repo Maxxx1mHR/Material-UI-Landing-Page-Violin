@@ -17,7 +17,7 @@ export const Experience = () => {
         Огромный опыт
       </Typography>
 
-      <Box sx={{ display: "flex", justifyContent: "space-between" }}></Box>
+      {/* <Box sx={{ display: "flex", justifyContent: "space-between" }}></Box> */}
 
       <Grid container spacing={2}>
         <Grid zero={12} tablet={6}>

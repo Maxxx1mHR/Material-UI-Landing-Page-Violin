@@ -1,6 +1,6 @@
 import { Box, Typography } from "@mui/material";
 import Grid from "@mui/material/Unstable_Grid2";
-import { RewardsDescriptiont } from "./RewardsDescription/RewardsDescription";
+import { RewardsDescription } from "./RewardsDescription/RewardsDescription";
 import { Slider } from "./Slider/Slider";
 
 export const Rewards = () => {
@@ -17,14 +17,14 @@ export const Rewards = () => {
         Нагады и заслуги
       </Typography>
 
-      <Box sx={{ display: "flex", justifyContent: "space-between" }}></Box>
+      {/* <Box sx={{ display: "flex", justifyContent: "space-between" }}></Box> */}
 
       <Grid container spacing={2}>
-        <Grid zero={12} tablet={6}>
+        <Grid zero={12} tablet={6} sx={{ order: { zero: 2, tablet: 1 } }}>
           <Slider />
         </Grid>
-        <Grid zero={12} tablet={6}>
-          <RewardsDescriptiont />
+        <Grid zero={12} tablet={6} sx={{ order: { zero: 1, tablet: 2 } }}>
+          <RewardsDescription />
         </Grid>
       </Grid>
     </Box>

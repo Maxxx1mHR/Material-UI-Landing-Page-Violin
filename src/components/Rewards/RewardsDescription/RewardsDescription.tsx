@@ -1,6 +1,6 @@
 import { Box } from "@mui/material";
 
-export const RewardsDescriptiont = () => {
+export const RewardsDescription = () => {
   return (
     <Box
       component="ul"
