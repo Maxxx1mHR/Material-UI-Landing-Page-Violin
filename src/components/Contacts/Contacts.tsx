@@ -1,6 +1,13 @@
 import { Box, Typography } from "@mui/material";
+import { useContext } from "react";
+import { DataContext } from "../../context/DataContext";
 
 export const Contacts = () => {
+  const {
+    data: {
+      contacts: { header },
+    },
+  } = useContext(DataContext);
   return (
     <Box>
       <Typography
@@ -11,7 +18,7 @@ export const Contacts = () => {
           marginBottom: "20px",
         }}
       >
-        Огромный опыт
+        {header}
       </Typography>
     </Box>
   );

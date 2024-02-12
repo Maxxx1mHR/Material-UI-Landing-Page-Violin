@@ -1,12 +1,13 @@
 import React, { useState } from "react";
 import { Box, Button, Card, CardContent, CardMedia, Container, Typography, useTheme } from "@mui/material";
-import data from "../../../../data.json";
 import { Swiper, SwiperRef, SwiperSlide } from "swiper/react";
 import "swiper/swiper-bundle.css";
 import { Navigation, Pagination, Scrollbar, A11y, Autoplay, EffectCoverflow } from "swiper/modules";
-import { BasicModal } from "../Modal/ModalWorkExample";
+import { ModalWorkExample } from "../Modal/ModalWorkExample";
 
 import { useRef } from "react";
+import { useContext } from "react";
+import { DataContext } from "../../../context/DataContext";
 
 interface ViolineData {
   id: string;
@@ -18,6 +19,12 @@ interface ViolineData {
 
 export const Slider = () => {
   const theme = useTheme();
+
+  const {
+    data: {
+      workExample: { header, subheader, examples },
+    },
+  } = useContext(DataContext);
 
   const [open, setOpen] = useState(false);
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -45,8 +52,10 @@ export const Slider = () => {
             marginBottom: "20px",
           }}
         >
-          Ручное производство
+          {header}
         </Typography>
+        <Typography sx={{ fontSize: "40px", textAlign: "center" }}>{subheader}</Typography>
+
         <Swiper
           effect={"coverflow"}
           ref={swiperRefLocal}
@@ -69,7 +78,7 @@ export const Slider = () => {
             },
           }}
         >
-          {data.map((item) => (
+          {examples.map((item) => (
             <SwiperSlide
               key={item.id}
               onClick={() => {
@@ -93,7 +102,7 @@ export const Slider = () => {
           ))}
         </Swiper>
       </Box>
-      <BasicModal
+      <ModalWorkExample
         open={open}
         setOpen={setOpen}
         violinData={violinData}

@@ -5,8 +5,14 @@ import "swiper/css";
 import "swiper/css/effect-creative";
 import { EffectCreative, EffectCards } from "swiper/modules";
 import { Box } from "@mui/material";
-
+import { useContext } from "react";
+import { DataContext } from "../../../context/DataContext";
 export const Slider = () => {
+  const {
+    data: {
+      rewards: { images },
+    },
+  } = useContext(DataContext);
   return (
     <Box>
       <Swiper
@@ -30,45 +36,11 @@ export const Slider = () => {
         // className="mySwiper"
         // modules={[EffectCreative]}
       >
-        <SwiperSlide className={styles.slide}>
-          <Box component="img" src="img/rewards/1.jpg" sx={{ width: "300px", height: "400px", background: "unset" }} />
-        </SwiperSlide>
-        <SwiperSlide className={styles.slide}>
-          <Box component="img" src="img/rewards/2.jpg" sx={{ width: "300px", height: "400px", background: "unset" }} />
-        </SwiperSlide>
-        <SwiperSlide className={styles.slide}>
-          <Box component="img" src="img/rewards/3.jpg" sx={{ width: "300px", height: "400px", background: "unset" }} />
-        </SwiperSlide>
-        <SwiperSlide className={styles.slide}>
-          <Box component="img" src="img/rewards/4.jpg" sx={{ width: "300px", height: "400px", background: "unset" }} />
-        </SwiperSlide>
-        <SwiperSlide className={styles.slide}>
-          <Box component="img" src="img/rewards/5.jpg" sx={{ width: "300px", height: "400px", background: "unset" }} />
-        </SwiperSlide>
-        <SwiperSlide className={styles.slide}>
-          <Box component="img" src="img/rewards/6.jpg" sx={{ width: "300px", height: "400px", background: "unset" }} />
-        </SwiperSlide>
-        <SwiperSlide className={styles.slide}>
-          <Box component="img" src="img/rewards/7.jpg" sx={{ width: "300px", height: "400px", background: "unset" }} />
-        </SwiperSlide>
-        <SwiperSlide className={styles.slide}>
-          <Box component="img" src="img/rewards/8.jpg" sx={{ width: "300px", height: "400px", background: "unset" }} />
-        </SwiperSlide>
-        <SwiperSlide className={styles.slide}>
-          <Box component="img" src="img/rewards/9.jpg" sx={{ width: "300px", height: "400px", background: "unset" }} />
-        </SwiperSlide>
-        <SwiperSlide className={styles.slide}>
-          <Box component="img" src="img/rewards/10.jpg" sx={{ width: "300px", height: "400px", background: "unset" }} />
-        </SwiperSlide>
-        <SwiperSlide className={styles.slide}>
-          <Box component="img" src="img/rewards/11.jpg" sx={{ width: "300px", height: "400px", background: "unset" }} />
-        </SwiperSlide>
-        <SwiperSlide className={styles.slide}>
-          <Box component="img" src="img/rewards/12.jpg" sx={{ width: "300px", height: "400px", background: "unset" }} />
-        </SwiperSlide>
-        <SwiperSlide className={styles.slide}>
-          <Box component="img" src="img/rewards/13.jpg" sx={{ width: "300px", height: "400px", background: "unset" }} />
-        </SwiperSlide>
+        {images.map((image) => (
+          <SwiperSlide className={styles.slide} key={image}>
+            <Box component="img" src={image} sx={{ width: "300px", height: "400px", background: "unset" }} />
+          </SwiperSlide>
+        ))}
       </Swiper>
     </Box>
   );

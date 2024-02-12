@@ -2,8 +2,15 @@ import { Box, Typography } from "@mui/material";
 import Grid from "@mui/material/Unstable_Grid2";
 import { RewardsDescription } from "./RewardsDescription/RewardsDescription";
 import { Slider } from "./Slider/Slider";
+import { useContext } from "react";
+import { DataContext } from "../../context/DataContext";
 
 export const Rewards = () => {
+  const {
+    data: {
+      rewards: { header },
+    },
+  } = useContext(DataContext);
   return (
     <Box>
       <Typography
@@ -14,7 +21,7 @@ export const Rewards = () => {
           marginBottom: "20px",
         }}
       >
-        Нагады и заслуги
+        {header}
       </Typography>
 
       {/* <Box sx={{ display: "flex", justifyContent: "space-between" }}></Box> */}

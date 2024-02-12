@@ -3,7 +3,8 @@ import { useState } from "react";
 import { Swiper, SwiperRef, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination, Scrollbar, A11y, Autoplay, EffectCube } from "swiper/modules";
 
-import data from "../../../../data.json";
+import { useContext } from "react";
+import { DataContext } from "../../../context/DataContext";
 
 interface MyComponentProps {
   open: boolean;
@@ -19,7 +20,7 @@ interface MyComponentProps {
   currentSlide: number;
 }
 
-export const BasicModal: React.FC<MyComponentProps> = (props) => {
+export const ModalWorkExample: React.FC<MyComponentProps> = (props) => {
   const handleClose = () => {
     props.setOpen(false);
     props.handleSlideClickResume();
@@ -30,6 +31,12 @@ export const BasicModal: React.FC<MyComponentProps> = (props) => {
     alignItems: "center",
     justifyContent: "center",
   });
+
+  const {
+    data: {
+      workExample: { examples },
+    },
+  } = useContext(DataContext);
 
   return (
     <div>
@@ -49,7 +56,6 @@ export const BasicModal: React.FC<MyComponentProps> = (props) => {
             position: "relative",
           }}
         >
-          {/* <Box component="img" src={props.violinData.imageSrc} width="100%" height="100%" /> */}
           <Swiper
             effect={"cube"}
             grabCursor={true}
@@ -63,19 +69,12 @@ export const BasicModal: React.FC<MyComponentProps> = (props) => {
             loop={true}
             navigation
             modules={[EffectCube, Pagination, Navigation]}
+            initialSlide={props.currentSlide}
           >
-            {data.map((item) => (
+            {examples.map((item) => (
               <SwiperSlide key={item.id}>
                 <Card sx={{ maxWidth: "100%", width: "800px", objectFit: "contain" }}>
                   <CardMedia sx={{ height: 800 }} image={item.imageSrc} title={item.title} />
-                  {/* <CardContent>
-                    <Typography gutterBottom variant="h5" component="div">
-                      {item.name}
-                    </Typography>
-                    <Typography variant="body2" color="text.secondary">
-                      {item.description}
-                    </Typography>
-                  </CardContent> */}
                 </Card>
               </SwiperSlide>
             ))}

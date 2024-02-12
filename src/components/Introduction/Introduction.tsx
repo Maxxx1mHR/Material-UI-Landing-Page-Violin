@@ -1,10 +1,26 @@
 import styles from "./Introduction.module.scss";
 import { Box, Typography, useTheme } from "@mui/material";
-
 import Grid from "@mui/material/Unstable_Grid2";
+import { useContext } from "react";
+import { DataContext } from "../../context/DataContext";
+
+const imageStyles = {
+  position: "absolute",
+  height: "100%",
+  top: "36px",
+  left: "50%",
+  transform: "translateX(-50%)",
+};
 
 export const Introduction = () => {
   const theme = useTheme();
+
+  const {
+    data: {
+      introduction: { header, subheader, description },
+    },
+  } = useContext(DataContext);
+
   return (
     <Box component="section">
       <Box className="container wrapper">
@@ -12,36 +28,16 @@ export const Introduction = () => {
           <Grid zero={12} tablet={8}>
             <Box>
               <Typography variant="h1" sx={{ fontSize: "40px", textAlign: "center" }}>
-                Дмитриева Светлана Станиславовна
+                {header}
               </Typography>
-              <Typography sx={{ fontSize: "40px", textAlign: "center" }}>Скрипичный мастер</Typography>
+              <Typography sx={{ fontSize: "40px", textAlign: "center" }}>{subheader}</Typography>
 
-              <Box sx={{ textAlign: "justify" }}>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime sed tempore voluptas natus consectetur
-                eveniet cupiditate eos? Quam, optio quaerat, cum iusto voluptatem magnam placeat quas dignissimos beatae
-                dolores ea deserunt aperiam aliquid molestiae illo eligendi laboriosam, repellendus perferendis odit hic
-                sint consectetur earum et magni. Dolorum illo a expedita, quis possimus voluptas quod perspiciatis
-                perferendis laudantium fuga quidem tenetur beatae, voluptatibus, iusto sed? Esse reiciendis deserunt
-                iusto eius molestiae vitae repellendus dolores ab aut veritatis, error similique veniam voluptatibus
-                sequi tempore reprehenderit quidem officia aspernatur porro voluptatem non suscipit tempora ipsam? Error
-                sed enim ratione quam, soluta molestias adipisci?
-              </Box>
+              <Box sx={{ textAlign: "justify" }}>{description}</Box>
             </Box>
           </Grid>
           <Grid zero={12} tablet={4}>
             <Box sx={{ position: "relative", height: "400px" }}>
-              <Box
-                component="img"
-                sx={{
-                  position: "absolute",
-                  height: "100%",
-                  top: "36px",
-                  left: "50%",
-                  transform: "translateX(-50%)",
-                }}
-                alt="Sveltala photo"
-                src="img/sveta.png"
-              />
+              <Box component="img" sx={imageStyles} alt="Svetlana Photo" src="img/sveta.png" />
             </Box>
           </Grid>
         </Grid>

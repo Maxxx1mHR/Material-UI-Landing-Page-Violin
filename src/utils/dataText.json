@@ -1,0 +1,173 @@
+{
+  "navigation": ["Обо мне", "Опыт", "Работы", "Достижения", "Прайс-лист", "Контакты"],
+  "introduction": {
+    "header": "Дмитриева Светлана Станиславовна",
+    "subheader": "Скрипичный мастер",
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime sed tempore voluptas natus consectetur eveniet cupiditate eos? Quam, optio quaerat, cum iusto voluptatem magnam placeat quas dignissimos beatae dolores ea deserunt aperiam aliquid molestiae illo eligendi laboriosam, repellendus perferendis odit hic sint consectetur earum et magni. Dolorum illo a expedita, quis possimus voluptas quod perspiciatis perferendis laudantium fuga quidem tenetur beatae, voluptatibus, iusto sed? Esse reiciendis deserunt iusto eius molestiae vitae repellendus dolores ab aut veritatis, error similique veniam voluptatibus sequi tempore reprehenderit quidem officia aspernatur porro voluptatem non suscipit tempora ipsam? Error sed enim ratione quam, soluta molestias adipisci?"
+  },
+  "workExample": {
+    "header": "Ручное производство",
+    "subheader": "Все работы выполнены исключительно вручную",
+    "examples": [
+      {
+        "id": "1",
+        "name": "Violin name1",
+        "description": "Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging across all continents except Antarctica",
+        "imageSrc": "img/sliderWorkExample/alt.jpg",
+        "title": "name"
+      },
+      {
+        "id": "2",
+        "name": "Violin name2",
+        "description": "Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging across all continents except Antarctica",
+        "imageSrc": "img/sliderWorkExample/feniks.jpg",
+        "title": "name"
+      },
+      {
+        "id": "3",
+        "name": "Violin name3",
+        "description": "Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging across all continents except Antarctica",
+        "imageSrc": "img/sliderWorkExample/kardinal.jpg",
+        "title": "name"
+      },
+      {
+        "id": "4",
+        "name": "Violin name4",
+        "description": "Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging across all continents except Antarctica",
+        "imageSrc": "img/sliderWorkExample/moxant.jpg",
+        "title": "name"
+      },
+      {
+        "id": "5",
+        "name": "Violin name5",
+        "description": "Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging across all continents except Antarctica",
+        "imageSrc": "img/sliderWorkExample/solano.jpg",
+        "title": "name"
+      },
+      {
+        "id": "6",
+        "name": "Violin name6",
+        "description": "Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging across all continents except Antarctica",
+        "imageSrc": "img/sliderWorkExample/spektrum.jpg",
+        "title": "name"
+      },
+      {
+        "id": "7",
+        "name": "Violin name7",
+        "description": "Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging across all continents except Antarctica",
+        "imageSrc": "img/sliderWorkExample/violin1.jpg",
+        "title": "name"
+      },
+      {
+        "id": "8",
+        "name": "Violin name8",
+        "description": "Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging across all continents except Antarctica",
+        "imageSrc": "img/sliderWorkExample/violin2.jpg",
+        "title": "name"
+      }
+    ]
+  },
+  "experience": {
+    "header": "Огромный опыт",
+    "subheader": "Все работы сделаны с любовью и душой!",
+    "description": "Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging across all continents except Antarctica",
+    "items": [
+      {
+        "id": 1,
+        "title": "Какой-то заголовок",
+        "description": "Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging across all continents except Antarctica"
+      },
+      {
+        "id": 2,
+        "title": "Какой-то заголовок",
+        "description": "Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging across all continents except Antarctica"
+      },
+      {
+        "id": 3,
+        "title": "Какой-то заголовок",
+        "description": "Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging across all continents except Antarctica"
+      }
+    ],
+    "images": [
+      "img/sliderWorkExperience/1.jpg",
+      "img/sliderWorkExperience/2.jpg",
+      "img/sliderWorkExperience/3.jpg",
+      "img/sliderWorkExperience/4.jpg",
+      "img/sliderWorkExperience/5.jpg",
+      "img/sliderWorkExperience/6.jpg"
+    ]
+  },
+  "rewards": {
+    "header": "Достижения",
+    "items": [
+      {
+        "id": 1,
+        "title": "Какой-то заголовок",
+        "description": "Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging across all continents except Antarctica"
+      },
+      {
+        "id": 2,
+        "title": "Какой-то заголовок",
+        "description": "Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging across all continents except Antarctica"
+      },
+      {
+        "id": 3,
+        "title": "Какой-то заголовок",
+        "description": "Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging across all continents except Antarctica"
+      }
+    ],
+    "images": [
+      "img/rewards/1.jpg",
+      "img/rewards/2.jpg",
+      "img/rewards/3.jpg",
+      "img/rewards/4.jpg",
+      "img/rewards/5.jpg",
+      "img/rewards/6.jpg",
+      "img/rewards/7.jpg",
+      "img/rewards/8.jpg",
+      "img/rewards/9.jpg",
+      "img/rewards/10.jpg",
+      "img/rewards/11.jpg",
+      "img/rewards/12.jpg",
+      "img/rewards/13.jpg"
+    ]
+  },
+  "provideServices": {
+    "header": "Прайс-лист",
+    "items": [
+      {
+        "id": 1,
+        "title": "Какой-то заголовок 1",
+        "description": "Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging across all continents except Antarctica"
+      },
+      {
+        "id": 2,
+        "title": "Какой-то заголовок 2",
+        "description": "Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging across all continents except Antarctica"
+      },
+      {
+        "id": 3,
+        "title": "Какой-то заголовок 3",
+        "description": "Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging across all continents except Antarctica"
+      },
+      {
+        "id": 4,
+        "title": "Какой-то заголовок 4",
+        "description": "Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging across all continents except Antarctica"
+      },
+      {
+        "id": 5,
+        "title": "Какой-то заголовок 5",
+        "description": "Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging across all continents except Antarctica"
+      },
+      {
+        "id": 6,
+        "title": "Какой-то заголовок 6",
+        "description": "Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging across all continents except Antarctica"
+      }
+    ]
+  },
+  "contacts": {
+    "header": "Контакты"
+  }
+}

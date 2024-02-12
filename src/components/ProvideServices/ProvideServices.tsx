@@ -1,7 +1,19 @@
-import { Box, Paper, Typography, styled } from "@mui/material";
+import { Box, Typography, styled } from "@mui/material";
 import Grid from "@mui/material/Unstable_Grid2"; // Grid version 2
+import { useContext } from "react";
+import { DataContext } from "../../context/DataContext";
 
 export const ProvideServices = () => {
+  const {
+    data: {
+      provideServices: { header, items },
+    },
+  } = useContext(DataContext);
+
+  const splitIndex = Math.ceil(items.length / 2);
+  const firstColumnItems = items.slice(0, splitIndex);
+  const secondColumnItems = items.slice(splitIndex);
+
   return (
     <Box>
       <Typography
@@ -12,127 +24,68 @@ export const ProvideServices = () => {
           marginBottom: "20px",
         }}
       >
-        С чем можем помочь
+        {header}
       </Typography>
-      <Grid container spacing={2}>
-        <Grid zero={12} tablet={6} sx={{ paddingBottom: { zero: 0, tablet: 1 } }}>
-          <Box
-            component="ul"
-            sx={{
-              color: "#fff",
-              listStyleType: "none",
-            }}
-          >
-            <Box component="li">
-              <Box sx={{ paddingLeft: "20px" }}>
-                <Box
-                  sx={{
-                    position: "relative",
-                    ":before": {
-                      content: "''",
-                      position: "absolute",
-                      left: "-25px",
-                      width: "20px",
-                      height: "20px",
-                      borderRadius: "50%",
-                      backgroundColor: "#fff",
-                    },
-                  }}
-                >
-                  Заголовок
-                </Box>
-                <Box>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto, inventore adipisci repellat nam beatae
-                  esse debitis explicabo est a obcaecati.
-                </Box>
-              </Box>
-            </Box>
-            <Box component="li">
-              <Box sx={{ paddingLeft: "20px" }}>
-                <Box
-                  sx={{
-                    position: "relative",
-                    ":before": {
-                      content: "''",
-                      position: "absolute",
-                      left: "-25px",
-                      width: "20px",
-                      height: "20px",
-                      borderRadius: "50%",
-                      backgroundColor: "#fff",
-                    },
-                  }}
-                >
-                  Заголовок
-                </Box>
-                <Box>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto, inventore adipisci repellat nam beatae
-                  esse debitis explicabo est a obcaecati.
+      <Box
+        component="ul"
+        sx={{
+          color: "#fff",
+          listStyleType: "none",
+        }}
+      >
+        <Grid container spacing={2}>
+          <Grid zero={12} tablet={6} sx={{ paddingBottom: { zero: 0, tablet: 1 } }}>
+            {firstColumnItems.map((item) => (
+              <Box component="li" key={item.id}>
+                <Box sx={{ paddingLeft: "20px" }}>
+                  <Box
+                    sx={{
+                      position: "relative",
+                      ":before": {
+                        content: "''",
+                        position: "absolute",
+                        left: "-25px",
+                        width: "20px",
+                        height: "20px",
+                        borderRadius: "50%",
+                        backgroundColor: "#fff",
+                      },
+                    }}
+                  >
+                    {item.title}
+                  </Box>
+                  <Box>{item.description}</Box>
                 </Box>
               </Box>
-            </Box>
-          </Box>
+            ))}
+          </Grid>
+          <Grid zero={12} tablet={6} sx={{ paddingBottom: { zero: 0, tablet: 1 } }}>
+            {secondColumnItems.map((item) => (
+              <Box component="li" key={item.id}>
+                <Box sx={{ paddingLeft: "20px" }}>
+                  <Box
+                    sx={{
+                      position: "relative",
+                      ":before": {
+                        content: "''",
+                        position: "absolute",
+                        left: "-25px",
+                        width: "20px",
+                        height: "20px",
+                        borderRadius: "50%",
+                        backgroundColor: "#fff",
+                      },
+                    }}
+                  >
+                    {item.title}
+                  </Box>
+                  <Box>{item.description}</Box>
+                </Box>
+              </Box>
+            ))}
+          </Grid>
         </Grid>
-
-        <Grid zero={12} tablet={6} sx={{ paddingTop: { zero: 0, tablet: 1 } }}>
-          <Box
-            component="ul"
-            sx={{
-              color: "#fff",
-              listStyleType: "none",
-            }}
-          >
-            <Box component="li">
-              <Box sx={{ paddingLeft: "20px" }}>
-                <Box
-                  sx={{
-                    position: "relative",
-                    ":before": {
-                      content: "''",
-                      position: "absolute",
-                      left: "-25px",
-                      width: "20px",
-                      height: "20px",
-                      borderRadius: "50%",
-                      backgroundColor: "#fff",
-                    },
-                  }}
-                >
-                  Заголовок
-                </Box>
-                <Box>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto, inventore adipisci repellat nam beatae
-                  esse debitis explicabo est a obcaecati.
-                </Box>
-              </Box>
-            </Box>
-            <Box component="li">
-              <Box sx={{ paddingLeft: "20px" }}>
-                <Box
-                  sx={{
-                    position: "relative",
-                    ":before": {
-                      content: "''",
-                      position: "absolute",
-                      left: "-25px",
-                      width: "20px",
-                      height: "20px",
-                      borderRadius: "50%",
-                      backgroundColor: "#fff",
-                    },
-                  }}
-                >
-                  Заголовок
-                </Box>
-                <Box>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto, inventore adipisci repellat nam beatae
-                  esse debitis explicabo est a obcaecati.
-                </Box>
-              </Box>
-            </Box>
-          </Box>
-        </Grid>
-      </Grid>
+      </Box>
     </Box>
   );
 };
