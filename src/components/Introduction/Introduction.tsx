@@ -2,7 +2,7 @@ import styles from "./Introduction.module.scss";
 import { Box, Typography, useTheme } from "@mui/material";
 import Grid from "@mui/material/Unstable_Grid2";
 import { useContext } from "react";
-import { DataContext } from "../../context/DataContext";
+import { DataContext } from "@context/DataContext";
 
 const imageStyles = {
   position: "absolute",
@@ -22,10 +22,10 @@ export const Introduction = () => {
   } = useContext(DataContext);
 
   return (
-    <Box component="section">
+    <Box component="section" sx={{ position: "relative", paddingTop: "140px", minHeight: "500px" }}>
       <Box className="container wrapper">
         <Grid container spacing={2}>
-          <Grid zero={12} tablet={8}>
+          <Grid mobile={12} tablet={8}>
             <Box>
               <Typography variant="h1" sx={{ fontSize: "40px", textAlign: "center" }}>
                 {header}
@@ -35,7 +35,7 @@ export const Introduction = () => {
               <Box sx={{ textAlign: "justify" }}>{description}</Box>
             </Box>
           </Grid>
-          <Grid zero={12} tablet={4}>
+          <Grid mobile={12} tablet={4}>
             <Box sx={{ position: "relative", height: "400px" }}>
               <Box component="img" sx={imageStyles} alt="Svetlana Photo" src="img/sveta.png" />
             </Box>

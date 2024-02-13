@@ -14,11 +14,11 @@ declare module "@mui/material/styles" {
     md: false;
     lg: false;
     xl: false;
-    zero: true;
     mobile: true; // adds the `mobile` breakpoint
     tablet: true;
     laptop: true;
     desktop: true;
+    desktop_large: true;
   }
 
   interface PaletteOptions {
@@ -38,11 +38,11 @@ export const theme = createTheme({
   },
   breakpoints: {
     values: {
-      zero: 0,
-      mobile: 320,
-      tablet: 768,
-      laptop: 1024,
-      desktop: 1200,
+      mobile: 0,
+      tablet: 576,
+      laptop: 768,
+      desktop: 992,
+      desktop_large: 1200,
     },
   },
 });

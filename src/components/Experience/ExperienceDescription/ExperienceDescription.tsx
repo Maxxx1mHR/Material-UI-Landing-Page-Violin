@@ -1,7 +1,7 @@
 import { Box, Button, Card, CardContent, CardMedia, Container, Typography, useTheme } from "@mui/material";
 
 import { useContext } from "react";
-import { DataContext } from "../../../context/DataContext";
+import { DataContext } from "@context/DataContext";
 
 export const ExperienceDescription = () => {
   // const theme = useTheme();

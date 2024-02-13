@@ -4,7 +4,7 @@ import { ExperienceDescription } from "./ExperienceDescription/ExperienceDescrip
 import Grid from "@mui/material/Unstable_Grid2";
 
 import { useContext } from "react";
-import { DataContext } from "../../context/DataContext";
+import { DataContext } from "@context/DataContext";
 
 export const Experience = () => {
   const {
@@ -29,10 +29,10 @@ export const Experience = () => {
       {/* <Box sx={{ display: "flex", justifyContent: "space-between" }}></Box> */}
 
       <Grid container spacing={2}>
-        <Grid zero={12} tablet={7}>
+        <Grid mobile={12} tablet={7}>
           <ExperienceDescription />
         </Grid>
-        <Grid zero={12} tablet={5}>
+        <Grid mobile={12} tablet={5}>
           <Slider />
         </Grid>
       </Grid>

@@ -1,6 +1,6 @@
 import { createContext, ReactNode } from "react";
 import { DataContentText } from "../interfaces/dataContentText.interface";
-import dataText from "../utils/dataText.json";
+import dataText from "@utils/dataText.json";
 
 interface DataContextType {
   data: DataContentText;

@@ -2,7 +2,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { EffectFade, Autoplay } from "swiper/modules";
 import { Box } from "@mui/material";
 import { useContext } from "react";
-import { DataContext } from "../../../context/DataContext";
+import { DataContext } from "@context/DataContext";
 export const Slider = () => {
   const {
     data: {

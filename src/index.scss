@@ -1,4 +1,6 @@
 @import "./styles/base/normalize";
+@import "./styles/abstract/variables";
+@import "./styles/abstract/mixins";
 
 html {
   font-size: 10px;
@@ -10,13 +12,6 @@ body {
     url("../public/img/background/girl.jpg");
   background-size: cover;
   background-position: center calc(50% + 54rem);
-}
-
-main {
-  // color: #fff;
-  // background-image: linear-gradient(to top, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
-  //   url("../public/img/background/girl.jpg");
-  // background-size: cover;
 }
 
 .container {

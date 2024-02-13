@@ -4,7 +4,7 @@ import { Swiper, SwiperRef, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination, Scrollbar, A11y, Autoplay, EffectCube } from "swiper/modules";
 
 import { useContext } from "react";
-import { DataContext } from "../../../context/DataContext";
+import { DataContext } from "@context/DataContext";
 
 interface MyComponentProps {
   open: boolean;
