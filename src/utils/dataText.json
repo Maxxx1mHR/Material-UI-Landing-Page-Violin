@@ -1,5 +1,11 @@
 {
-  "navigation": ["Обо мне", "Опыт", "Работы", "Достижения", "Прайс-лист", "Контакты"],
+  "navigation": {
+    "logoPath": "img/logo.svg",
+    "logoAlt": "Logo image",
+    "logoTitleMale": "Dmitriev",
+    "logoTitleFemale": "Dmitrieva",
+    "items": ["Обо мне", "Опыт", "Работы", "Достижения", "Прайс-лист", "Контакты"]
+  },
   "introduction": {
     "header": "Дмитриева Светлана Станиславовна",
     "subheader": "Скрипичный мастер",

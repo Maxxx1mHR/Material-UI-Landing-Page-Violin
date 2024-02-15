@@ -1,5 +1,11 @@
 export interface DataContentText {
-  navigation: string[];
+  navigation: {
+    logoPath: string;
+    logoAlt: string;
+    logoTitleMale: string;
+    logoTitleFemale: string;
+    items: string[];
+  };
   introduction: { [key: string]: string };
   workExample: { header: string; subheader: string; examples: Examples[] };
   experience: { header: string; subheader: string; description: string; items: Item[]; images: string[] };
