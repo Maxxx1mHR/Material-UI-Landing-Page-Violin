@@ -42,6 +42,7 @@ export const theme = createTheme({
   typography: {
     fontFamily: "'Roboto', sans-serif",
     fontSize: 16,
+
     h1: {
       // fontSize: 36,
       fontWeight: 500,

@@ -7,7 +7,7 @@ import { LogoItem } from "./LogoItem";
 export const Navbar = () => {
   const {
     data: {
-      navigation: { logoPath, logoAlt, logoTitleMale, logoTitleFemale, items },
+      navigation: { logoTitleMale, logoTitleFemale, items },
     },
   } = useContext(DataContext);
 

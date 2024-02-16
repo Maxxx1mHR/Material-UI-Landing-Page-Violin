@@ -5,15 +5,15 @@ export const IntroductionStyles = {
     minHeight: "400px",
   },
   header: {
-    paddingTop: "50px",
-    fontSize: { mobile: "26px", tablet: "36px" },
+    // paddingTop: "50px",
+    // fontSize: { mobile: "26px", tablet: "36px" },
   },
-  subheader: {
-    fontSize: { mobile: "20px", tablet: "26px" },
-  },
-  description: {
-    fontSize: { mobile: "14px", tablet: "16px" },
-  },
+  // subheader: {
+  //   fontSize: { mobile: "20px", tablet: "26px" },
+  // },
+  // description: {
+  //   fontSize: { mobile: "14px", tablet: "16px" },
+  // },
   imageWrapper: {
     height: { mobile: "300px", laptop: "350px" },
   },

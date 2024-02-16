@@ -3,6 +3,7 @@ export const NavbarStyle = {
     position: "fixed",
     width: "100%",
     backgroundColor: "rgba(0, 0, 0, 0.7)",
+    color: "#fff",
     zIndex: "2",
   },
   wrapper: {
