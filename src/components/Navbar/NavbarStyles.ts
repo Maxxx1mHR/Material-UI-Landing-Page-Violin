@@ -8,22 +8,18 @@ export const NavbarStyle = {
   wrapper: {
     display: "flex",
     justifyContent: "space-between",
-    padding: "1rem 2rem",
+    padding: "10px 20px",
   },
-  // logo: {
-  //   height: { mobile: "4rem", laptop: "6rem" },
-  //   transition: { mobile: "all 1s" },
-  //   zIndex: "2",
-  // },
+
   logoTitle: {
     display: "inline-flex",
     alignItems: "center",
-    fontSize: { mobile: "1.6rem", laptop: "2rem" },
+    fontSize: { mobile: "16px", laptop: "20px" },
     zIndex: "2", // Добавляем zIndex для заголовка
     fill: "red",
   },
   fontStyle: {
-    fontSize: { mobile: "2rem", laptop: "1.6rem", desktop_large: "2rem" },
+    fontSize: { mobile: "20px", laptop: "16px", desktop_large: "20px" },
   },
   listWrapper: {
     position: { mobile: "fixed", laptop: "unset" },

@@ -17,7 +17,6 @@ export const Navbar = () => {
     <Box component="nav" sx={NavbarStyle.nav}>
       <Box className="container" sx={NavbarStyle.wrapper}>
         <Stack direction="row" spacing={2}>
-          {/* <Box component="img" src={logoPath} alt={logoAlt} sx={NavbarStyle.logo} /> */}
           <LogoItem fill={isOpen ? "black" : "white"} height="4rem" style={{ zIndex: 2 }} />
 
           <Box sx={{ ...NavbarStyle.logoTitle, ...(isOpen ? NavbarStyle.mobile_menu_color : null) }}>

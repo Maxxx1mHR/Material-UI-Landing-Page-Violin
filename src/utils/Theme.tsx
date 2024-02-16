@@ -30,12 +30,6 @@ declare module "@mui/material/styles" {
 }
 
 export const theme = createTheme({
-  palette: {
-    colors: {
-      backgroundColorNavigationBar: "#562B13",
-      textColor: "#ffffff",
-    },
-  },
   breakpoints: {
     values: {
       mobile: 0,
@@ -43,6 +37,29 @@ export const theme = createTheme({
       laptop: 768,
       desktop: 992,
       desktop_large: 1200,
+    },
+  },
+  typography: {
+    fontFamily: "'Roboto', sans-serif",
+    fontSize: 16,
+    h1: {
+      // fontSize: 36,
+      fontWeight: 500,
+      textAlign: "center",
+    },
+    subtitle1: {
+      // fontSize: 30,
+      fontWeight: 400,
+      textAlign: "center",
+    },
+    body2: {
+      textAlign: "justify",
+    },
+  },
+  palette: {
+    colors: {
+      backgroundColorNavigationBar: "#562B13",
+      textColor: "#ffffff",
     },
   },
 });

@@ -3,23 +3,23 @@
 @import "./styles/abstract/mixins";
 
 html {
-  font-size: 10px;
+  // font-size: 10px;
 }
 
 body {
   color: #fff;
   background-image: linear-gradient(to top, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("../img/background/girl.jpg");
   background-size: cover;
-  background-position: center calc(50% + 54rem);
+  background-position: center calc(50% + 468px);
 }
 
 .container {
-  max-width: 128rem;
+  max-width: 1280px;
   margin: 0 auto;
 }
 
 .wrapper {
-  padding: 0 2rem;
+  padding: 0 20px;
 }
 
 .swiper-slide-shadow {

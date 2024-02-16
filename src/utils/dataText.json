@@ -4,12 +4,14 @@
     "logoAlt": "Logo image",
     "logoTitleMale": "Dmitriev",
     "logoTitleFemale": "Dmitrieva",
-    "items": ["Обо мне", "Опыт", "Работы", "Достижения", "Прайс-лист", "Контакты"]
+    "items": ["Обо мне", "Опыт", "Работы", "Награды", "Прайс-лист", "Контакты"]
   },
   "introduction": {
-    "header": "Дмитриева Светлана Станиславовна",
+    "header": "Дмитриева Светлана",
     "subheader": "Скрипичный мастер",
-    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime sed tempore voluptas natus consectetur eveniet cupiditate eos? Quam, optio quaerat, cum iusto voluptatem magnam placeat quas dignissimos beatae dolores ea deserunt aperiam aliquid molestiae illo eligendi laboriosam, repellendus perferendis odit hic sint consectetur earum et magni. Dolorum illo a expedita, quis possimus voluptas quod perspiciatis perferendis laudantium fuga quidem tenetur beatae, voluptatibus, iusto sed? Esse reiciendis deserunt iusto eius molestiae vitae repellendus dolores ab aut veritatis, error similique veniam voluptatibus sequi tempore reprehenderit quidem officia aspernatur porro voluptatem non suscipit tempora ipsam? Error sed enim ratione quam, soluta molestias adipisci?"
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime sed tempore voluptas natus consectetur eveniet cupiditate eos? Quam, optio quaerat, cum iusto voluptatem magnam placeat quas dignissimos beatae dolores ea deserunt aperiam aliquid molestiae illo eligendi laboriosam, repellendus perferendis odit hic sint consectetur earum et magni. Dolorum illo a expedita, quis possimus voluptas quod perspiciatis perferendis laudantium fuga quidem tenetur beatae, voluptatibus, iusto sed? Esse reiciendis deserunt iusto eius molestiae vitae repellendus dolores ab aut veritatis, error similique veniam voluptatibus sequi tempore reprehenderit quidem officia aspernatur porro voluptatem non suscipit tempora ipsam? Error sed enim ratione quam, soluta molestias adipisci?",
+    "imagePath": "img/sveta.png",
+    "imageAlt": "Svetlana Photo"
   },
   "workExample": {
     "header": "Ручное производство",

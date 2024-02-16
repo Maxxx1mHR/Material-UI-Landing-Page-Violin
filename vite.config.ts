@@ -12,7 +12,7 @@ export default defineConfig({
       "@interfaces": path.resolve(__dirname, "src/interfaces"),
       "@layouts": path.resolve(__dirname, "src/layouts"),
       "@utils": path.resolve(__dirname, "src/utils"),
-      "@styles": path.resolve(__dirname, "src/styles"),
+      // "@styles": path.resolve(__dirname, "src/styles"),
     },
   },
 });
