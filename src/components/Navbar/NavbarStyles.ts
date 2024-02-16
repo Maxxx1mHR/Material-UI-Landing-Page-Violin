@@ -10,11 +10,11 @@ export const NavbarStyle = {
     justifyContent: "space-between",
     padding: "1rem 2rem",
   },
-  logo: {
-    height: { mobile: "4rem", laptop: "6rem" },
-    transition: { mobile: "all 1s" },
-    zIndex: "2",
-  },
+  // logo: {
+  //   height: { mobile: "4rem", laptop: "6rem" },
+  //   transition: { mobile: "all 1s" },
+  //   zIndex: "2",
+  // },
   logoTitle: {
     display: "inline-flex",
     alignItems: "center",

@@ -7,7 +7,7 @@ import { DataContext } from "@context/DataContext";
 const imageStyles = {
   position: "absolute",
   height: "100%",
-  top: "36px",
+  top: "76px",
   left: "50%",
   transform: "translateX(-50%)",
 };
@@ -22,12 +22,12 @@ export const Introduction = () => {
   } = useContext(DataContext);
 
   return (
-    <Box component="section" sx={{ position: "relative", paddingTop: "140px", minHeight: "500px" }}>
+    <Box component="section" sx={{ position: "relative", paddingTop: "68px", minHeight: "500px" }}>
       <Box className="container wrapper">
         <Grid container spacing={2}>
-          <Grid mobile={12} tablet={8}>
+          <Grid tablet={12} laptop={8}>
             <Box>
-              <Typography variant="h1" sx={{ fontSize: "40px", textAlign: "center" }}>
+              <Typography variant="h1" sx={{ fontSize: "40px", textAlign: "center", paddingTop: "50px" }}>
                 {header}
               </Typography>
               <Typography sx={{ fontSize: "40px", textAlign: "center" }}>{subheader}</Typography>
@@ -35,7 +35,7 @@ export const Introduction = () => {
               <Box sx={{ textAlign: "justify" }}>{description}</Box>
             </Box>
           </Grid>
-          <Grid mobile={12} tablet={4}>
+          <Grid tablet={12} laptop={4}>
             <Box sx={{ position: "relative", height: "400px" }}>
               <Box component="img" sx={imageStyles} alt="Svetlana Photo" src="img/sveta.png" />
             </Box>

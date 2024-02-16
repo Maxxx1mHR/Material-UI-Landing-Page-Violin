@@ -1,9 +1,8 @@
-import styles from "./Navbar.module.scss";
 import { Box, MenuItem, Stack, Typography } from "@mui/material";
 import { useContext, useState } from "react";
 import { DataContext } from "@context/DataContext";
 import { NavbarStyle } from "./NavbarStyles";
-import SVG from "react-inlinesvg";
+import { LogoItem } from "./LogoItem";
 
 export const Navbar = () => {
   const {
@@ -14,13 +13,12 @@ export const Navbar = () => {
 
   const [isOpen, setOpen] = useState(false);
 
-  // setOpen(!isOpen);
-
   return (
     <Box component="nav" sx={NavbarStyle.nav}>
       <Box className="container" sx={NavbarStyle.wrapper}>
         <Stack direction="row" spacing={2}>
-          <Box component="img" src={logoPath} alt={logoAlt} sx={NavbarStyle.logo} />
+          {/* <Box component="img" src={logoPath} alt={logoAlt} sx={NavbarStyle.logo} /> */}
+          <LogoItem fill={isOpen ? "black" : "white"} height="4rem" style={{ zIndex: 2 }} />
 
           <Box sx={{ ...NavbarStyle.logoTitle, ...(isOpen ? NavbarStyle.mobile_menu_color : null) }}>
             {logoTitleMale}&{logoTitleFemale}
@@ -31,8 +29,8 @@ export const Navbar = () => {
           component="ul"
           sx={{
             ...NavbarStyle.listWrapper,
-            ...(isOpen ? NavbarStyle.active_menu : null), // Conditionally apply active_menu
-            ...(isOpen ? NavbarStyle.mobile_menu_color : null), // Conditionally apply mobile_menu_color
+            ...(isOpen ? NavbarStyle.active_menu : null),
+            ...(isOpen ? NavbarStyle.mobile_menu_color : null),
           }}
         >
           {items.map((item) => (
