@@ -7,8 +7,8 @@ import { useContext } from "react";
 import { DataContext } from "@context/DataContext";
 
 interface MyComponentProps {
-  open: boolean;
-  setOpen: (newValue: boolean) => void;
+  isModalOpen: boolean;
+  setIsModalOpen: (newValue: boolean) => void;
   violinData: {
     id: string;
     name: string;
@@ -16,14 +16,14 @@ interface MyComponentProps {
     imageSrc: string;
     title: string;
   };
-  handleSlideClickResume: () => void;
+  // handleSlideClickResume: () => void;
   currentSlide: number;
 }
 
 export const ModalWorkExample: React.FC<MyComponentProps> = (props) => {
   const handleClose = () => {
-    props.setOpen(false);
-    props.handleSlideClickResume();
+    props.setIsModalOpen(false);
+    // props.handleSlideClickResume();
   };
 
   const StyledModal = styled(Modal)({
@@ -41,19 +41,20 @@ export const ModalWorkExample: React.FC<MyComponentProps> = (props) => {
   return (
     <div>
       <StyledModal
-        open={props.open}
+        open={props.isModalOpen}
         onClose={handleClose}
         aria-labelledby="modal-modal-title"
         aria-describedby="modal-modal-description"
       >
         <Box
           sx={{
-            maxWidth: "800px",
-            maxHeight: "800px",
+            maxWidth: "50%",
+            maxHeight: "50%",
             width: "auto",
             height: "auto",
             overflow: "hidden",
             position: "relative",
+            padding: "20px",
           }}
         >
           <Swiper
