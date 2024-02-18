@@ -27,20 +27,20 @@ export const SliderWorkExampleStyles = {
     height: { mobile: 400, laptop: 500 },
     minWidth: "350px",
   },
-  buttonPrev: {
-    position: "absolute",
-    left: 0,
-    transform: "translateY(-50%)",
-    color: "orange",
-    display: { desktop_large: "inline-flex", mobile: "none" },
-  },
-  buttonNext: {
-    position: "absolute",
-    right: 0,
-    transform: "translateY(-50%)",
-    color: "orange",
-    display: { desktop_large: "inline-flex", mobile: "none" },
-  },
+  // buttonPrev: {
+  //   position: "absolute",
+  //   left: 0,
+  //   transform: "translateY(-50%)",
+  //   color: "orange",
+  //   display: { desktop_large: "inline-flex", mobile: "none" },
+  // },
+  // buttonNext: {
+  //   position: "absolute",
+  //   right: 0,
+  //   transform: "translateY(-50%)",
+  //   color: "orange",
+  //   display: { desktop_large: "inline-flex", mobile: "none" },
+  // },
   pagination: {
     display: { desktop_large: "none" },
     span: {

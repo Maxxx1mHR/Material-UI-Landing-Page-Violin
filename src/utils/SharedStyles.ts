@@ -15,4 +15,18 @@ export const SharedStyles = {
       color: "#fff",
     },
   },
+  buttonPrev: {
+    position: "absolute",
+    left: 0,
+    transform: "translateY(-50%)",
+    color: "orange",
+    display: { desktop_large: "inline-flex", mobile: "none" },
+  },
+  buttonNext: {
+    position: "absolute",
+    right: 0,
+    transform: "translateY(-50%)",
+    color: "orange",
+    display: { desktop_large: "inline-flex", mobile: "none" },
+  },
 };

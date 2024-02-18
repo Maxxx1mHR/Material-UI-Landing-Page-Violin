@@ -11,8 +11,8 @@
       "@components/*": ["components/*"],
       "@interfaces/*": ["interfaces/*"],
       "@layouts/*": ["layouts/*"],
-      "@utils/*": ["utils/*"]
-      // "@styles/*": ["styles/*"]
+      "@utils/*": ["utils/*"],
+      "@styles/*": ["styles/*"]
     },
 
     /* Bundler mode */

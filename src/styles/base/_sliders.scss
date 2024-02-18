@@ -1,0 +1,24 @@
+.work_example_swiper_big {
+  height: 80%;
+}
+.work_example_swiper_small {
+  height: 20%;
+  padding: 10px 0;
+}
+.work_example_swiper_small .swiper-slide {
+  width: 25%;
+  height: 100%;
+  opacity: 0.3;
+}
+
+.work_example_swiper_small .swiper-slide-thumb-active {
+  opacity: 1;
+}
+
+.work_example_swiper_small .swiper-slide img,
+.work_example_swiper_big .swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}

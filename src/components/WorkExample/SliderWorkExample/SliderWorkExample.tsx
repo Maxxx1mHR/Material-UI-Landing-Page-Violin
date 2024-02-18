@@ -9,14 +9,7 @@ import { useRef } from "react";
 import { useContext } from "react";
 import { DataContext } from "@context/DataContext";
 import { SliderWorkExampleStyles } from "./SliderWorkExampleStyles";
-
-interface ViolineData {
-  id: string;
-  name: string;
-  description: string;
-  imageSrc: string;
-  title: string;
-}
+import { SharedStyles } from "@utils/SharedStyles";
 
 export const SliderWorkExample = () => {
   const {
@@ -27,29 +20,17 @@ export const SliderWorkExample = () => {
 
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [currentSlide, setCurrentSlide] = useState(0);
-  const [violinData, setViolineData] = useState<ViolineData>({} as ViolineData);
 
-  const handleOpenModal = (item: number) => {
-    // console.log("handleOpen cur", currentSlide);
-    setCurrentSlide(item);
+  const handleOpenModal = () => {
     setIsModalOpen(true);
   };
 
   const swiperRefLocal = useRef<SwiperRef | null>(null);
 
-  // const handleSlideClickPause = () => {
-  //   console.log("123");
-  //   swiperRefLocal.current?.swiper.autoplay?.pause();
-  // };
-  // const handleSlideClickResume = () => {
-  //   swiperRefLocal.current?.swiper.autoplay?.resume();
-  // };
-
   useEffect(() => {
     const swiper = swiperRefLocal.current?.swiper;
     if (swiper) {
       if (isModalOpen) {
-        // console.log("cur", currentSlide);
         swiper.autoplay.stop();
       } else {
         swiper.autoplay.start();
@@ -74,33 +55,18 @@ export const SliderWorkExample = () => {
         pagination={{
           el: ".swiper-pagination",
         }}
-        // autoplay={{ delay: 1000 }}
-        // onClick={() => handleSlideClickPause()}
-        // onClick={() => {
-        //   setTimeout(() => {
-        //     handleSlideClickPause();
-        //   }, 100);
-        // }}
-        // onClick={handleSlideClickPause}
-        // onClick={() => {
-        //   console.log("123");
-        //   handleOpenModal();
-        // }}
+        autoplay={{ delay: 3000 }}
         breakpoints={SliderWorkExampleStyles.breakpoints}
         coverflowEffect={{
           slideShadows: false,
         }}
       >
-        {examples.map((item, index) => (
+        {examples.map((item) => (
           <SwiperSlide
             key={item.id}
             onClick={() => {
-              // setViolineData(item);
-              // setCurrentSlide(Number(item.id));
-              handleOpenModal(Number(item.id));
-              // setTimeout(() => {
-              //   // swiperRefLocal.current?.swiper.autoplay.pause();
-              // }, 100); // Добавляем задержку перед паузой
+              setCurrentSlide(Number(item.id));
+              handleOpenModal();
             }}
           >
             <Card sx={SliderWorkExampleStyles.card}>
@@ -116,17 +82,11 @@ export const SliderWorkExample = () => {
             </Card>
           </SwiperSlide>
         ))}
-        <IconButton className="swiper-button-prev" sx={SliderWorkExampleStyles.buttonPrev} />
-        <IconButton className="swiper-button-next" sx={SliderWorkExampleStyles.buttonNext}></IconButton>
+        <IconButton className="swiper-button-prev" sx={SharedStyles.buttonPrev} />
+        <IconButton className="swiper-button-next" sx={SharedStyles.buttonNext} />
         <Box className="swiper-pagination" sx={SliderWorkExampleStyles.pagination}></Box>
       </Swiper>
-      <ModalWorkExample
-        isModalOpen={isModalOpen}
-        setIsModalOpen={setIsModalOpen}
-        violinData={violinData}
-        // handleSlideClickResume={handleSlideClickResume}
-        currentSlide={currentSlide}
-      />
+      <ModalWorkExample isModalOpen={isModalOpen} setIsModalOpen={setIsModalOpen} currentSlide={currentSlide} />
     </>
   );
 };

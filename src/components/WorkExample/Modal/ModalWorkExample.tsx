@@ -1,4 +1,16 @@
-import { Box, Button, Card, CardContent, CardMedia, Modal, Typography, styled } from "@mui/material";
+import {
+  Box,
+  Button,
+  Card,
+  CardContent,
+  CardMedia,
+  IconButton,
+  Modal,
+  Typography,
+  styled,
+  useMediaQuery,
+  useTheme,
+} from "@mui/material";
 import { MouseEvent, MouseEventHandler, useState } from "react";
 import { Swiper, SwiperRef, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination, Scrollbar, A11y, Autoplay, EffectCube, Zoom, FreeMode, Thumbs } from "swiper/modules";
@@ -14,34 +26,20 @@ import "swiper/css/pagination";
 import "swiper/css/free-mode";
 import "swiper/css/thumbs";
 import "./styles.scss";
+import { ModalMorkExampleStyles } from "./ModalWorkExampleStyles";
+import { SharedStyles } from "@utils/SharedStyles";
 
 interface MyComponentProps {
   isModalOpen: boolean;
   setIsModalOpen: (newValue: boolean) => void;
-  violinData: {
-    id: string;
-    name: string;
-    description: string;
-    imageSrc: string;
-    title: string;
-  };
-  // handleSlideClickResume: () => void;
   currentSlide: number;
 }
 
 export const ModalWorkExample: React.FC<MyComponentProps> = (props) => {
   const handleClose = () => {
     props.setIsModalOpen(false);
-    // props.handleSlideClickResume();
     setThumbsSwiper(null);
   };
-  console.log("in other comp", props.currentSlide);
-
-  const StyledModal = styled(Modal)({
-    display: "flex",
-    alignItems: "center",
-    justifyContent: "center",
-  });
 
   const {
     data: {
@@ -49,33 +47,42 @@ export const ModalWorkExample: React.FC<MyComponentProps> = (props) => {
     },
   } = useContext(DataContext);
 
-  console.log("ТЕКУЩИЙ СЛАЙД", props.currentSlide);
-
   const [thumbsSwiper, setThumbsSwiper] = useState<SwiperS | null>(null);
-  console.log("))))", thumbsSwiper);
+
+  const theme = useTheme();
+  const isDesktop = useMediaQuery(theme.breakpoints.up("desktop"));
+  const isLaptop = useMediaQuery(theme.breakpoints.up("laptop"));
+
+  let slidesPerView = 2;
+  if (isDesktop) {
+    slidesPerView = 4;
+  } else if (isLaptop) {
+    slidesPerView = 3;
+  }
+
   return (
-    // <div>
     <Modal
       open={props.isModalOpen}
       onClose={handleClose}
       aria-labelledby="modal-modal-title"
       aria-describedby="modal-modal-description"
     >
-      {/* <Box className={props.isModalOpen ? "modal modal_active" : "modal"}> */}
-      <Box className="modal">
+      <Box sx={ModalMorkExampleStyles.modal}>
         <Box sx={{ position: "absolute", top: "50px", right: "50px", color: "red", zIndex: 2 }} onClick={handleClose}>
           Close
         </Box>
-        {/* <Box className="modal_content" onClick={(e) => e.stopPropagation()}> */}
-        <Box className="modal_content">
+        <Box sx={ModalMorkExampleStyles.modal_content}>
           <Swiper
             spaceBetween={10}
-            navigation={true}
+            navigation={{
+              nextEl: ".swiper-button-next",
+              prevEl: ".swiper-button-prev",
+            }}
             thumbs={{ swiper: thumbsSwiper }}
             modules={[FreeMode, Navigation, Thumbs, Zoom]}
             zoom={true}
             initialSlide={props.currentSlide}
-            className="mySwiper2"
+            className="work_example_swiper_big"
           >
             {examples.map((item) => (
               <SwiperSlide key={item.id}>
@@ -84,15 +91,17 @@ export const ModalWorkExample: React.FC<MyComponentProps> = (props) => {
                 </div>
               </SwiperSlide>
             ))}
+            <IconButton className="swiper-button-prev" sx={SharedStyles.buttonPrev} />
+            <IconButton className="swiper-button-next" sx={SharedStyles.buttonNext} />
           </Swiper>
           <Swiper
             onSwiper={setThumbsSwiper}
             spaceBetween={10}
-            slidesPerView={4}
+            slidesPerView={slidesPerView}
             freeMode={true}
             watchSlidesProgress={true}
             modules={[FreeMode, Navigation, Thumbs]}
-            className="mySwiper"
+            className="work_example_swiper_small"
           >
             {examples.map((item) => (
               <SwiperSlide key={item.id}>
