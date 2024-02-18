@@ -7,11 +7,11 @@ import { ThemeProvider } from "@mui/material";
 import { theme } from "@utils/Theme.tsx";
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
-  <React.StrictMode>
-    <DataContentProvider>
-      <ThemeProvider theme={theme}>
-        <App />
-      </ThemeProvider>
-    </DataContentProvider>
-  </React.StrictMode>
+  // <React.StrictMode>
+  <DataContentProvider>
+    <ThemeProvider theme={theme}>
+      <App />
+    </ThemeProvider>
+  </DataContentProvider>
+  //  </React.StrictMode>
 );

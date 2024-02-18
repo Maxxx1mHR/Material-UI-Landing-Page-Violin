@@ -28,7 +28,12 @@ export const SliderWorkExample = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [currentSlide, setCurrentSlide] = useState(0);
   const [violinData, setViolineData] = useState<ViolineData>({} as ViolineData);
-  const handleOpenModal = () => setIsModalOpen(true);
+
+  const handleOpenModal = (item: number) => {
+    // console.log("handleOpen cur", currentSlide);
+    setCurrentSlide(item);
+    setIsModalOpen(true);
+  };
 
   const swiperRefLocal = useRef<SwiperRef | null>(null);
 
@@ -44,6 +49,7 @@ export const SliderWorkExample = () => {
     const swiper = swiperRefLocal.current?.swiper;
     if (swiper) {
       if (isModalOpen) {
+        // console.log("cur", currentSlide);
         swiper.autoplay.stop();
       } else {
         swiper.autoplay.start();
@@ -68,7 +74,7 @@ export const SliderWorkExample = () => {
         pagination={{
           el: ".swiper-pagination",
         }}
-        autoplay={{ delay: 1000 }}
+        // autoplay={{ delay: 1000 }}
         // onClick={() => handleSlideClickPause()}
         // onClick={() => {
         //   setTimeout(() => {
@@ -76,18 +82,22 @@ export const SliderWorkExample = () => {
         //   }, 100);
         // }}
         // onClick={handleSlideClickPause}
+        // onClick={() => {
+        //   console.log("123");
+        //   handleOpenModal();
+        // }}
         breakpoints={SliderWorkExampleStyles.breakpoints}
         coverflowEffect={{
           slideShadows: false,
         }}
       >
-        {examples.map((item) => (
+        {examples.map((item, index) => (
           <SwiperSlide
             key={item.id}
             onClick={() => {
-              setViolineData(item);
-              setCurrentSlide(Number(item.id) - 1);
-              handleOpenModal();
+              // setViolineData(item);
+              // setCurrentSlide(Number(item.id));
+              handleOpenModal(Number(item.id));
               // setTimeout(() => {
               //   // swiperRefLocal.current?.swiper.autoplay.pause();
               // }, 100); // Добавляем задержку перед паузой

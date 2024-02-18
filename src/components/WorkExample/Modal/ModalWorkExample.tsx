@@ -1,10 +1,19 @@
 import { Box, Button, Card, CardContent, CardMedia, Modal, Typography, styled } from "@mui/material";
-import { useState } from "react";
+import { MouseEvent, MouseEventHandler, useState } from "react";
 import { Swiper, SwiperRef, SwiperSlide } from "swiper/react";
-import { Navigation, Pagination, Scrollbar, A11y, Autoplay, EffectCube } from "swiper/modules";
+import { Navigation, Pagination, Scrollbar, A11y, Autoplay, EffectCube, Zoom, FreeMode, Thumbs } from "swiper/modules";
 
 import { useContext } from "react";
 import { DataContext } from "@context/DataContext";
+import { Swiper as SwiperS } from "swiper";
+
+import "swiper/css";
+import "swiper/css/zoom";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+import "swiper/css/free-mode";
+import "swiper/css/thumbs";
+import "./styles.scss";
 
 interface MyComponentProps {
   isModalOpen: boolean;
@@ -24,7 +33,9 @@ export const ModalWorkExample: React.FC<MyComponentProps> = (props) => {
   const handleClose = () => {
     props.setIsModalOpen(false);
     // props.handleSlideClickResume();
+    setThumbsSwiper(null);
   };
+  console.log("in other comp", props.currentSlide);
 
   const StyledModal = styled(Modal)({
     display: "flex",
@@ -38,50 +49,61 @@ export const ModalWorkExample: React.FC<MyComponentProps> = (props) => {
     },
   } = useContext(DataContext);
 
+  console.log("ТЕКУЩИЙ СЛАЙД", props.currentSlide);
+
+  const [thumbsSwiper, setThumbsSwiper] = useState<SwiperS | null>(null);
+  console.log("))))", thumbsSwiper);
   return (
-    <div>
-      <StyledModal
-        open={props.isModalOpen}
-        onClose={handleClose}
-        aria-labelledby="modal-modal-title"
-        aria-describedby="modal-modal-description"
-      >
-        <Box
-          sx={{
-            maxWidth: "50%",
-            maxHeight: "50%",
-            width: "auto",
-            height: "auto",
-            overflow: "hidden",
-            position: "relative",
-            padding: "20px",
-          }}
-        >
+    // <div>
+    <Modal
+      open={props.isModalOpen}
+      onClose={handleClose}
+      aria-labelledby="modal-modal-title"
+      aria-describedby="modal-modal-description"
+    >
+      {/* <Box className={props.isModalOpen ? "modal modal_active" : "modal"}> */}
+      <Box className="modal">
+        <Box sx={{ position: "absolute", top: "50px", right: "50px", color: "red", zIndex: 2 }} onClick={handleClose}>
+          Close
+        </Box>
+        {/* <Box className="modal_content" onClick={(e) => e.stopPropagation()}> */}
+        <Box className="modal_content">
           <Swiper
-            effect={"cube"}
-            grabCursor={true}
-            cubeEffect={{
-              shadow: true,
-              slideShadows: true,
-              shadowOffset: 20,
-              shadowScale: 0.94,
-            }}
-            pagination={true}
-            loop={true}
-            navigation
-            modules={[EffectCube, Pagination, Navigation]}
+            spaceBetween={10}
+            navigation={true}
+            thumbs={{ swiper: thumbsSwiper }}
+            modules={[FreeMode, Navigation, Thumbs, Zoom]}
+            zoom={true}
             initialSlide={props.currentSlide}
+            className="mySwiper2"
           >
             {examples.map((item) => (
               <SwiperSlide key={item.id}>
-                <Card sx={{ maxWidth: "100%", width: "800px", objectFit: "contain" }}>
-                  <CardMedia sx={{ height: 800 }} image={item.imageSrc} title={item.title} />
-                </Card>
+                <div className="swiper-zoom-container">
+                  <Box component="img" src={item.imageSrc} sx={{ objectFit: "contain !important" }} />
+                </div>
+              </SwiperSlide>
+            ))}
+          </Swiper>
+          <Swiper
+            onSwiper={setThumbsSwiper}
+            spaceBetween={10}
+            slidesPerView={4}
+            freeMode={true}
+            watchSlidesProgress={true}
+            modules={[FreeMode, Navigation, Thumbs]}
+            className="mySwiper"
+          >
+            {examples.map((item) => (
+              <SwiperSlide key={item.id}>
+                <div>
+                  <Box component="img" src={item.imageSrc} sx={{ objectFit: "contain" }} />
+                </div>
               </SwiperSlide>
             ))}
           </Swiper>
         </Box>
-      </StyledModal>
-    </div>
+      </Box>
+    </Modal>
   );
 };
