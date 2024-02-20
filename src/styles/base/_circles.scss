@@ -1,0 +1,30 @@
+.circle {
+  position: relative;
+  &:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #fff;
+  }
+}
+
+.circle_small {
+  &::before {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+.circle_connection {
+  position: relative;
+  &:before {
+    content: "";
+    position: absolute;
+    width: 2px;
+    height: 100%;
+    background-color: #fff;
+  }
+}

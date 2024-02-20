@@ -1,30 +1,25 @@
 import { Box, Typography } from "@mui/material";
 import Grid from "@mui/material/Unstable_Grid2";
 import { RewardsDescription } from "./RewardsDescription/RewardsDescription";
-import { Slider } from "./Slider/Slider";
+import { Slider } from "./SliderRewards/SliderRewards";
 import { useContext } from "react";
 import { DataContext } from "@context/DataContext";
+import { SharedStyles } from "@utils/SharedStyles";
 
 export const Rewards = () => {
   const {
     data: {
-      rewards: { header },
+      rewards: { header, subheader },
     },
   } = useContext(DataContext);
   return (
     <Box>
-      <Typography
-        variant="h3"
-        component="h1"
-        sx={{
-          textAlign: "center",
-          marginBottom: "20px",
-        }}
-      >
+      <Typography variant="h1" sx={SharedStyles.typography.header}>
         {header}
       </Typography>
-
-      {/* <Box sx={{ display: "flex", justifyContent: "space-between" }}></Box> */}
+      <Typography variant="subtitle1" sx={SharedStyles.typography.subheader}>
+        {subheader}
+      </Typography>
 
       <Grid container spacing={2}>
         <Grid mobile={12} tablet={6} sx={{ order: { mobile: 2, tablet: 1 } }}>

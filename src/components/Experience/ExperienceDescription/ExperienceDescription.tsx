@@ -1,5 +1,5 @@
 import { Box, Button, Card, CardContent, CardMedia, Container, Typography, useTheme } from "@mui/material";
-
+import Grid from "@mui/material/Unstable_Grid2"; // Grid version 2
 import { useContext } from "react";
 import { DataContext } from "@context/DataContext";
 
@@ -12,6 +12,10 @@ export const ExperienceDescription = () => {
     },
   } = useContext(DataContext);
 
+  const splitIndex = Math.ceil(items.length / 2);
+  const firstColumnItems = items.slice(0, splitIndex);
+  const secondColumnItems = items.slice(splitIndex);
+
   return (
     <>
       <Box component="section">
@@ -23,42 +27,52 @@ export const ExperienceDescription = () => {
               listStyleType: "none",
             }}
           >
-            {items.map((item) => (
-              <Box
-                key={item.id}
-                component="li"
-                sx={{
-                  position: "relative",
-                  "&:before": {
-                    content: "''",
-                    position: "absolute",
-                    width: "2px",
-                    height: "100%",
-                    backgroundColor: "#fff",
-                  },
-                }}
+            <Grid container spacing={2}>
+              <Grid
+                mobile={12}
+                laptop={6}
+                sx={{ paddingBottom: { mobile: 0, laptop: 1 }, paddingTop: { mobile: 0, laptop: 1 } }}
               >
-                <Box sx={{ paddingLeft: "20px" }}>
-                  <Box
-                    sx={{
-                      position: "relative",
-                      ":before": {
-                        content: "''",
-                        position: "absolute",
-                        left: "-25px",
-                        width: "20px",
-                        height: "20px",
-                        borderRadius: "50%",
-                        backgroundColor: "#fff",
-                      },
-                    }}
-                  >
-                    {item.title}
+                {firstColumnItems.map((item) => (
+                  <Box key={item.id} component="li">
+                    <Box className="circle">
+                      <Box
+                        component="img"
+                        src={item.icons}
+                        alt="treble_clef"
+                        sx={{ position: "absolute", zIndex: 2 }}
+                      />
+                    </Box>
+                    <Typography component="div" variant="body2" sx={{ paddingLeft: "50px" }}>
+                      <Box>{item.title}</Box>
+                      <Box>{item.description}</Box>
+                    </Typography>
                   </Box>
-                  <Box>{item.description}</Box>
-                </Box>
-              </Box>
-            ))}
+                ))}
+              </Grid>
+              <Grid
+                mobile={12}
+                laptop={6}
+                sx={{ paddingBottom: { mobile: 0, laptop: 1 }, paddingTop: { mobile: 0, laptop: 1 } }}
+              >
+                {secondColumnItems.map((item) => (
+                  <Box key={item.id} component="li">
+                    <Box className="circle">
+                      <Box
+                        component="img"
+                        src={item.icons}
+                        alt="treble_clef"
+                        sx={{ position: "absolute", zIndex: 2 }}
+                      />
+                    </Box>
+                    <Typography component="div" variant="body2" sx={{ paddingLeft: "50px" }}>
+                      <Box>{item.title}</Box>
+                      <Box>{item.description}</Box>
+                    </Typography>
+                  </Box>
+                ))}
+              </Grid>
+            </Grid>
           </Box>
         </Box>
       </Box>

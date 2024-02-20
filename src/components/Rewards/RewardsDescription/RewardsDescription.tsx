@@ -17,37 +17,9 @@ export const RewardsDescription = () => {
       }}
     >
       {items.map((item) => (
-        <Box
-          key={item.id}
-          component="li"
-          sx={{
-            position: "relative",
-            "&:before": {
-              content: "''",
-              position: "absolute",
-              width: "2px",
-              height: "100%",
-              backgroundColor: "#fff",
-            },
-          }}
-        >
+        <Box key={item.id} component="li" className="circle_connection">
           <Box sx={{ paddingLeft: "20px" }}>
-            <Box
-              sx={{
-                position: "relative",
-                ":before": {
-                  content: "''",
-                  position: "absolute",
-                  left: "-25px",
-                  width: "20px",
-                  height: "20px",
-                  borderRadius: "50%",
-                  backgroundColor: "#fff",
-                },
-              }}
-            >
-              {item.title}
-            </Box>
+            <Box className="circle circle_small">{item.title}</Box>
             <Box>{item.description}</Box>
           </Box>
         </Box>

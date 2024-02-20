@@ -8,8 +8,14 @@ export interface DataContentText {
   };
   introduction: { [key: string]: string };
   workExample: { header: string; subheader: string; examples: Examples[] };
-  experience: { header: string; subheader: string; description: string; items: Item[]; images: string[] };
-  rewards: { header: string; items: Item[]; images: string[] };
+  experience: {
+    header: string;
+    subheader: string;
+    description: string;
+    items: Item[];
+    images: string[];
+  };
+  rewards: { header: string; subheader: string; items: Item[]; images: string[] };
   provideServices: { header: string; items: Item[] };
   contacts: { header: string };
 }
@@ -26,4 +32,5 @@ interface Item {
   id: number;
   title: string;
   description: string;
+  icons?: string;
 }

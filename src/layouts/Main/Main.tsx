@@ -1,6 +1,6 @@
 import { Box } from "@mui/material";
 import { Rewards } from "../../components/Rewards/Rewards";
-import { Experience } from "../../components/Experience/Experince";
+import { Experience } from "../../components/Experience/Experience";
 import { ProvideServices } from "../../components/ProvideServices/ProvideServices";
 import { Contacts } from "../../components/Contacts/Contacts";
 import { WorkExample } from "@components/WorkExample/WorkExample";
