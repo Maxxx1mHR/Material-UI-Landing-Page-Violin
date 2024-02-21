@@ -2,11 +2,12 @@ import { Box, Typography, styled } from "@mui/material";
 import Grid from "@mui/material/Unstable_Grid2"; // Grid version 2
 import { useContext } from "react";
 import { DataContext } from "@context/DataContext";
+import { SharedStyles } from "@utils/SharedStyles";
 
 export const ProvideServices = () => {
   const {
     data: {
-      provideServices: { header, items },
+      provideServices: { header, subheader, items },
     },
   } = useContext(DataContext);
 
@@ -16,15 +17,11 @@ export const ProvideServices = () => {
 
   return (
     <Box>
-      <Typography
-        variant="h3"
-        component="h1"
-        sx={{
-          textAlign: "center",
-          marginBottom: "20px",
-        }}
-      >
+      <Typography variant="h1" sx={SharedStyles.typography.header}>
         {header}
+      </Typography>
+      <Typography variant="subtitle1" sx={SharedStyles.typography.subheader}>
+        {subheader}
       </Typography>
       <Box
         component="ul"
@@ -34,7 +31,7 @@ export const ProvideServices = () => {
         }}
       >
         <Grid container spacing={2}>
-          <Grid mobile={12} tablet={6} sx={{ paddingBottom: { mobile: 0, tablet: 1 } }}>
+          <Grid mobile={12} laptop={6} sx={{ paddingBottom: { mobile: 0, laptop: 1 } }}>
             {firstColumnItems.map((item) => (
               <Box component="li" key={item.id}>
                 <Box sx={{ paddingLeft: "20px" }}>
@@ -59,7 +56,7 @@ export const ProvideServices = () => {
               </Box>
             ))}
           </Grid>
-          <Grid mobile={12} tablet={6} sx={{ paddingBottom: { mobile: 0, tablet: 1 } }}>
+          <Grid mobile={12} laptop={6} sx={{ paddingBottom: { mobile: 0, laptop: 1 } }}>
             {secondColumnItems.map((item) => (
               <Box component="li" key={item.id}>
                 <Box sx={{ paddingLeft: "20px" }}>

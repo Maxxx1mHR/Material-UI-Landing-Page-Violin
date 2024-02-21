@@ -16,8 +16,8 @@ export interface DataContentText {
     images: string[];
   };
   rewards: { header: string; subheader: string; items: Item[]; images: string[] };
-  provideServices: { header: string; items: Item[] };
-  contacts: { header: string };
+  provideServices: { header: string; subheader: string; items: Item[] };
+  contacts: { header: string; subheader: string; subheader_contact: string };
 }
 
 interface Examples {

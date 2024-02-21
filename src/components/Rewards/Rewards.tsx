@@ -22,10 +22,10 @@ export const Rewards = () => {
       </Typography>
 
       <Grid container spacing={2}>
-        <Grid mobile={12} tablet={6} sx={{ order: { mobile: 2, tablet: 1 } }}>
+        <Grid mobile={12} laptop={6} sx={{ order: { mobile: 2, laptop: 1 } }}>
           <Slider />
         </Grid>
-        <Grid mobile={12} tablet={6} sx={{ order: { mobile: 1, tablet: 2 } }}>
+        <Grid mobile={12} laptop={6} sx={{ order: { mobile: 1, laptop: 2 } }}>
           <RewardsDescription />
         </Grid>
       </Grid>
