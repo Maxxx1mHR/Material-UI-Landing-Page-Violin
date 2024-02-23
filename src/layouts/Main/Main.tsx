@@ -22,7 +22,7 @@ export const Main = () => {
         <Rewards />
         <ProvideServices />
         <Contacts />
-        <Footer />
+        {/* <Footer /> */}
       </Box>
     </Box>
   );

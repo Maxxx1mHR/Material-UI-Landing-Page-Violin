@@ -1,7 +1,7 @@
 export const SharedStyles = {
   typography: {
     header: {
-      paddingTop: "50px",
+      // paddingTop: "50px",
       fontSize: { mobile: "26px", tablet: "36px" },
       color: "#fff",
     },

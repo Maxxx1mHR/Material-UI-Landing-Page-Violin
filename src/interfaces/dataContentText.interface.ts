@@ -17,11 +17,11 @@ export interface DataContentText {
   };
   rewards: { header: string; subheader: string; items: Item[]; images: string[] };
   provideServices: { header: string; subheader: string; items: Item[] };
-  contacts: { header: string; subheader: string; subheader_contact: string };
+  contacts: { header: string; subheader: string; subheader_text: string; subheader_contact: string };
 }
 
 interface Examples {
-  id: string;
+  id: number;
   name: string;
   description: string;
   imageSrc: string;
