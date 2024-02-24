@@ -6,7 +6,7 @@ import dotenv from "dotenv";
 dotenv.config();
 
 const app = express();
-const PORT = 3001;
+// const PORT = 3001;
 
 app.use(cors()); // Добавляем cors middleware
 app.use(bodyParser.urlencoded({ extended: false }));
@@ -49,6 +49,6 @@ app.post("/send-email", async (req, res) => {
   }
 });
 
-app.listen(PORT, () => {
-  console.log(`Server is running on http://localhost:${PORT}`);
-});
+// app.listen(PORT, () => {
+//   console.log(`Server is running on http://localhost:${PORT}`);
+// });
