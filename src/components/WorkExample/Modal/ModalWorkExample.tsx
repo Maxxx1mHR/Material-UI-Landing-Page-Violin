@@ -1,19 +1,7 @@
-import {
-  Box,
-  Button,
-  Card,
-  CardContent,
-  CardMedia,
-  IconButton,
-  Modal,
-  Typography,
-  styled,
-  useMediaQuery,
-  useTheme,
-} from "@mui/material";
-import { MouseEvent, MouseEventHandler, useState } from "react";
-import { Swiper, SwiperRef, SwiperSlide } from "swiper/react";
-import { Navigation, Pagination, Scrollbar, A11y, Autoplay, EffectCube, Zoom, FreeMode, Thumbs } from "swiper/modules";
+import { Box, IconButton, Modal, useMediaQuery, useTheme } from "@mui/material";
+import { useState } from "react";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation, Zoom, FreeMode, Thumbs } from "swiper/modules";
 
 import { useContext } from "react";
 import { DataContext } from "@context/DataContext";
@@ -25,7 +13,6 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/free-mode";
 import "swiper/css/thumbs";
-import "./styles.scss";
 import { ModalMorkExampleStyles } from "./ModalWorkExampleStyles";
 import { SharedStyles } from "@utils/SharedStyles";
 

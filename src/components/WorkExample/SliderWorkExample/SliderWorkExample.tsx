@@ -1,8 +1,8 @@
-import React, { useEffect, useState } from "react";
-import { Box, Button, Card, CardContent, CardMedia, Container, IconButton, Typography, useTheme } from "@mui/material";
+import { useEffect, useState } from "react";
+import { Box, Card, CardContent, CardMedia, IconButton, Typography } from "@mui/material";
 import { Swiper, SwiperRef, SwiperSlide } from "swiper/react";
 import "swiper/swiper-bundle.css";
-import { Navigation, Pagination, Scrollbar, A11y, Autoplay, EffectCoverflow } from "swiper/modules";
+import { Navigation, Pagination, Scrollbar, Autoplay, EffectCoverflow } from "swiper/modules";
 import { ModalWorkExample } from "../Modal/ModalWorkExample";
 
 import { useRef } from "react";
@@ -38,7 +38,6 @@ export const SliderWorkExample = () => {
     }
   }, [isModalOpen]);
 
-  const theme = useTheme();
   return (
     <>
       <Swiper

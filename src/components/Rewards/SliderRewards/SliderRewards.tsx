@@ -3,7 +3,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 
 import "swiper/css";
 import "swiper/css/effect-creative";
-import { EffectCreative, EffectCards } from "swiper/modules";
+import { EffectCreative } from "swiper/modules";
 import { Box } from "@mui/material";
 import { useContext } from "react";
 import { DataContext } from "@context/DataContext";

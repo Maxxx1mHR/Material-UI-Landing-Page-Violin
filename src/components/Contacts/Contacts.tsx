@@ -14,14 +14,18 @@ export const Contacts = () => {
     },
   } = useContext(DataContext);
   return (
-    <Box>
+    <Box sx={{ position: "relative", paddingBottom: "70px" }}>
       <Typography variant="h1" sx={SharedStyles.typography.header}>
         {header}
       </Typography>
 
       <Grid container>
         <Grid mobile={12} laptop={4} sx={{ display: { mobile: "none", laptop: "flex", alignItems: "flex-end" } }}>
-          <Box component="img" src="img/sveta_contacts2.png" sx={{ height: "400px" }} />
+          <Box
+            component="img"
+            src="img/sveta_contacts2.png"
+            sx={{ height: "500px", position: "absolute", bottom: 0 }}
+          />
         </Grid>
         <Grid mobile={12} laptop={8}>
           <Typography variant="subtitle1" sx={SharedStyles.typography.subheader}>

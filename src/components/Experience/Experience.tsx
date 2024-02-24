@@ -1,7 +1,6 @@
-import { Box, Stack, Typography } from "@mui/material";
+import { Box, Typography } from "@mui/material";
 import { SliderExperience } from "./SliderExperience/SliderExperience";
 import { ExperienceDescription } from "./ExperienceDescription/ExperienceDescription";
-import Grid from "@mui/material/Grid";
 
 import { useContext } from "react";
 import { DataContext } from "@context/DataContext";

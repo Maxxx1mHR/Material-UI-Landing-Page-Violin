@@ -68,16 +68,19 @@ export const theme = createTheme({
       styleOverrides: {
         root: {
           "&.Mui-focused .MuiOutlinedInput-notchedOutline": {
-            borderColor: "rgba(255,182,45,0.5)",
+            borderColor: "rgb(255,129,0)",
+
+            borderWidth: "3px",
           },
           "&:hover": {
             ".MuiOutlinedInput-notchedOutline": {
-              borderColor: "rgb(255,182,45)",
-              borderWidth: "2px",
+              borderColor: "rgb(255,129,0)",
+              borderWidth: "3px",
             },
           },
           ".MuiOutlinedInput-notchedOutline": {
-            borderColor: "rgba(255,255,255,0.5)",
+            borderColor: "rgba(255,129,0,0.3)",
+            backgroundColor: "rgba(255,255,255,0.1)",
             borderWidth: "2px",
           },
         },
@@ -86,9 +89,9 @@ export const theme = createTheme({
     MuiInputLabel: {
       styleOverrides: {
         root: {
-          color: "red",
+          color: "rgba(255,255,255,0.6)",
           "&.Mui-focused": {
-            color: "red",
+            color: "rgb(255,129,0)",
           },
         },
       },
@@ -96,9 +99,22 @@ export const theme = createTheme({
     MuiInputBase: {
       styleOverrides: {
         root: {
-          color: "pink",
+          color: "#ffffff",
         },
       },
     },
+    // MuiCheckbox: {
+    //   styleOverrides: {
+    //     root: {
+    //       color: "rgb(255,129,0)",
+    //       "&.Mui-checked": {
+    //         color: "rgb(255,129,0)",
+    //       },
+    //       "&:hover": {
+    //         backgroundColor: "rgba(255,129,0,0.1)",
+    //       },
+    //     },
+    //   },
+    // },
   },
 });

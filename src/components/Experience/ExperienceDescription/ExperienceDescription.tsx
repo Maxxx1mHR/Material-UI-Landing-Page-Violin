@@ -1,4 +1,4 @@
-import { Box, Button, Card, CardContent, CardMedia, Container, Typography, useTheme } from "@mui/material";
+import { Box, Typography } from "@mui/material";
 import Grid from "@mui/material/Unstable_Grid2"; // Grid version 2
 import { useContext } from "react";
 import { DataContext } from "@context/DataContext";
