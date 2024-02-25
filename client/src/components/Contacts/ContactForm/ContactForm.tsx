@@ -72,7 +72,7 @@ export const ContactForm = () => {
 
     // http://localhost:3001/send-email
     try {
-      const response = await fetch("https://violin-server-mail.vercel.app/send-email", {
+      const response = await fetch("https://violin-server.vercel.app/send-email", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
