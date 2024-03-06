@@ -23,21 +23,27 @@ export const Navbar = () => {
             {logoTitleMale}&{logoTitleFemale}
           </Box>
         </Stack>
-        <Stack
-          direction="row"
-          component="ul"
-          sx={{
-            ...NavbarStyle.listWrapper,
-            ...(isOpen ? NavbarStyle.active_menu : null),
-            ...(isOpen ? NavbarStyle.mobile_menu_color : null),
-          }}
-        >
-          {items.map((item) => (
-            <MenuItem key={item} sx={NavbarStyle.listItem}>
-              <Typography sx={NavbarStyle.fontStyle}>{item}</Typography>
-            </MenuItem>
-          ))}
-        </Stack>
+        <Box sx={{ ...NavbarStyle.menu, ...(isOpen && NavbarStyle.active_menu) }}>
+          <Stack direction="row" component="ul" sx={NavbarStyle.listWrapper}>
+            {items.map((item) => (
+              <MenuItem key={item} sx={NavbarStyle.listItem}>
+                <Typography sx={NavbarStyle.fontStyle}>{item}</Typography>
+              </MenuItem>
+            ))}
+          </Stack>
+          <Box
+            sx={{
+              position: "fixed",
+              width: "100%",
+              height: "100%",
+              top: 0,
+              left: 0,
+              opacity: 0.6,
+              // visibility: "hidden",
+              // backgroundColor: "black",
+            }}
+          ></Box>
+        </Box>
         <Box
           sx={NavbarStyle.hamburger_lines}
           onClick={() => {

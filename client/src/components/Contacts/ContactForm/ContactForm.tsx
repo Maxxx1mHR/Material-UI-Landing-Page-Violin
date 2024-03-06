@@ -155,11 +155,11 @@ export const ContactForm = () => {
               />
             }
             label={
-              <Box>
+              <Box sx={{ color: "#fff" }}>
                 Я согласен(а) с{" "}
-                <a href="/policy.html" target="_blank" rel="noopener noreferrer">
+                <Box component="a" href="/policy.html" target="_blank" rel="noopener noreferrer" sx={{ color: "#fff" }}>
                   политикой конфиденциальности
-                </a>
+                </Box>
               </Box>
             }
           />

@@ -40,7 +40,7 @@ export const ExperienceDescription = () => {
                         component="img"
                         src={item.icons}
                         alt="treble_clef"
-                        sx={{ position: "absolute", zIndex: 2 }}
+                        sx={{ position: "absolute", zIndex: 2, left: "3px", top: "1px" }}
                       />
                     </Box>
                     <Typography component="div" variant="body2" sx={{ paddingLeft: "50px" }}>
@@ -62,7 +62,7 @@ export const ExperienceDescription = () => {
                         component="img"
                         src={item.icons}
                         alt="treble_clef"
-                        sx={{ position: "absolute", zIndex: 2 }}
+                        sx={{ position: "absolute", zIndex: 2, left: "4px", top: "4px" }}
                       />
                     </Box>
                     <Typography component="div" variant="body2" sx={{ paddingLeft: "50px" }}>

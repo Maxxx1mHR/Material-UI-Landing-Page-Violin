@@ -44,6 +44,7 @@ export const theme = createTheme({
     fontSize: 16,
 
     h1: {
+      paddingTop: "2rem",
       // fontSize: 36,
       fontWeight: 500,
       textAlign: "center",

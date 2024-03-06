@@ -8,7 +8,7 @@ interface MenuIconProps {
 
 const Path = styled.path`
   fill: ${(props) => props.fill};
-  transition: all 5s linear;
+  transition: all 1s linear;
 `;
 
 export const LogoItem: React.FC<MenuIconProps> = (props) => (

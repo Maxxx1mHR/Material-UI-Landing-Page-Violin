@@ -22,19 +22,36 @@ export const NavbarStyle = {
   fontStyle: {
     fontSize: { mobile: "20px", laptop: "16px", desktop_large: "20px" },
   },
-  listWrapper: {
+  menu: {
     position: { mobile: "fixed", laptop: "unset" },
+
+    height: { mobile: "100vh", laptop: "unset" },
+
+    // color: { mobile: "#000", laptop: "unset" },
+
+    top: { mobile: "0", laptop: "unset" },
+
+    width: { mobile: "100%", laptop: "unset" },
+
+    left: { mobile: "-100%", laptop: "unset" },
+
+    transition: "all 1s",
+
+    zIndex: "1",
+
+    // visibility: "hidden",
+  },
+  listWrapper: {
+    position: "relative",
     flexDirection: { mobile: "column", laptop: "row" },
     justifyContent: { mobile: "center", laptop: "unset" },
     alignItems: { mobile: "center", laptop: "unset" },
     width: { mobile: "75%", laptop: "unset" },
     backgroundColor: { mobile: "#fff", laptop: "unset" },
-    top: { mobile: "0", laptop: "unset" },
-    left: { mobile: "-100%", laptop: "unset" },
-    height: { mobile: "100%", laptop: "unset" },
     color: { mobile: "#000", laptop: "unset" },
-    zIndex: "1",
-    transition: "all 1s",
+
+    height: { mobile: "100%", laptop: "unset" },
+    zIndex: "3",
   },
   listItem: {
     padding: { desktop_large: "6px 16px", mobile: "6px 6px" },
@@ -55,8 +72,11 @@ export const NavbarStyle = {
     justifyContent: "space-between",
     cursor: "pointer",
   },
+
   active_menu: {
     left: "0",
+    visibility: "visible",
+    opacity: 1,
   },
   mobile_menu_color: {
     color: "#955900",

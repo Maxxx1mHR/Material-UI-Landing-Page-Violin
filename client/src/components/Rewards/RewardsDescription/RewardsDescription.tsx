@@ -19,7 +19,7 @@ export const RewardsDescription = () => {
       {items.map((item) => (
         <Box key={item.id} component="li" className="circle_connection">
           <Box sx={{ paddingLeft: "20px" }}>
-            <Box className="circle circle_small">{item.title}</Box>
+            <Box className="circle_small">{item.title}</Box>
             <Box>{item.description}</Box>
           </Box>
         </Box>
