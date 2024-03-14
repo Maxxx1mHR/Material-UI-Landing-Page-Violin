@@ -75,9 +75,27 @@ export const NavbarStyle = {
 
   active_menu: {
     left: "0",
-    visibility: "visible",
-    opacity: 1,
+    // visibility: "visible",
+    // opacity: 1,
   },
+
+  overlay: {
+    position: "fixed",
+    width: "100%",
+    height: "100%",
+    top: 0,
+    left: 0,
+    opacity: 0,
+    visibility: "hidden",
+    backgroundColor: "black",
+    transition: "all 1s",
+  },
+  active_overlay: {
+    // transition: "all 1s",
+    visibility: "visible",
+    opacity: 0.6,
+  },
+
   mobile_menu_color: {
     color: "#955900",
   },

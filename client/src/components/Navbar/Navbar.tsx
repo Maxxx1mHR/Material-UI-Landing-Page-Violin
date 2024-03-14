@@ -13,6 +13,12 @@ export const Navbar = () => {
 
   const [isOpen, setOpen] = useState(false);
 
+  if (!isOpen) {
+    document.body.style.overflow = "visible";
+  } else {
+    document.body.style.overflow = "hidden";
+  }
+
   return (
     <Box component="nav" sx={NavbarStyle.nav}>
       <Box className="container" sx={NavbarStyle.wrapper}>
@@ -33,14 +39,11 @@ export const Navbar = () => {
           </Stack>
           <Box
             sx={{
-              position: "fixed",
-              width: "100%",
-              height: "100%",
-              top: 0,
-              left: 0,
-              opacity: 0.6,
-              // visibility: "hidden",
-              // backgroundColor: "black",
+              ...NavbarStyle.overlay,
+              ...(isOpen && NavbarStyle.active_overlay),
+            }}
+            onClick={() => {
+              setOpen(!isOpen);
             }}
           ></Box>
         </Box>
